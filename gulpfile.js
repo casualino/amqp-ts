@@ -30,8 +30,8 @@ var tsProject = ts.createProject({
 
 gulp.task('default', ['build:clean']);
 
-gulp.task('build', ['compile', 'copy-to-lib', 'test:dot']);
-gulp.task('build:clean', ['clean', 'compile', 'test:dot']);
+gulp.task('build', ['compile', 'copy-to-lib']);
+gulp.task('build:clean', ['clean', 'compile']);
 
 gulp.task('watch', ['clean', 'build'], function () {
   gulp.watch('server/**/*.ts', ['build']);

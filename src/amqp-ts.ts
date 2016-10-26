@@ -416,6 +416,10 @@ export class Exchange {
   _deleting: Promise<void>;
   _closing: Promise<void>;
 
+  get channel() {
+    return this._channel;
+  }
+
   get name() {
     return this._name;
   }
@@ -675,6 +679,10 @@ export class Queue {
   _consumerStopping: boolean;
   _deleting: Promise<Queue.DeleteResult>;
   _closing: Promise<void>;
+
+  get channel() {
+    return this._channel;
+  }
 
   get name() {
     return this._name;

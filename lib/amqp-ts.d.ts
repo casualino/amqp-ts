@@ -77,6 +77,7 @@ export declare class Exchange {
     initialized: Promise<Exchange.InitializeResult>;
     name: string;
     type: string;
+    channel: any;
     constructor(connection: Connection, name: string, type?: string, options?: Exchange.DeclarationOptions);
     /**
      * deprecated, use 'exchange.send(message: Message)' instead
@@ -143,6 +144,7 @@ export declare namespace Queue {
 export declare class Queue {
     initialized: Promise<Queue.InitializeResult>;
     name: string;
+    channel: any;
 
     constructor(connection: Connection, name: string, options?: Queue.DeclarationOptions);
     /**
